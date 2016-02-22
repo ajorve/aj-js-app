@@ -2,12 +2,14 @@
 
 html,body {
   height:auto;
+  background-image: url("img/dream.jpg");
 }
 
 h1 {
   font-family: 'Antic Slab', serif;
   font-size:80px;
   color:#ff006e;
+  text-emphasis: strong
 }
 
 .lead {
@@ -22,14 +24,17 @@ h1 {
   min-height:80%;
 }
 
-.container-full a {
-  color:#00ff21;
-  text-decoration:none;
-}
-
 .panel {
     text-align: center;
-    grid-column-align: 
-        center
+    grid-column-align: center;
+    grid-row-align: center;
+}
+
+.input[type="radio"]:not(:checked) + label {
+    color: #ff006e;
+}
+
+.input[type="radio"]:checked + label {
+    color: #808080;
 }
   
