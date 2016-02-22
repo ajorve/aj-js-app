@@ -6,52 +6,54 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
+    <meta name="description" content="Vacation Selector Application">
+    <meta name="author" content="Anders Jorve, Epicodus Student">
 
-    <title>Epicodus JQuery Vacation App</title>
+    <title>AJ Vacation App</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/sweetalert-master/dist/sweetalert.css" rel="stylesheet">
 
+    <!--CSS Style Plugins-->
+    <link  href="css/animate.css" rel="stylesheet">
+
     <!-- Custom CSS -->
     <link href="css/custom.css" rel="stylesheet">
+    
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
 
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
+    <!--JavaScript and jQuery UI plugins-->
+    <script src="js/chosen.jquery.js"></script>
+    
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+    <script src="js/Script.js"></script>
 
 </head>
 
 <body>
     
  <div class="container-full">
-
-      <div class="row">
-       
-        <div class="col-lg-12 text-center v-center">
+   <div class="row">
+    <div class="col-lg-12 text-center v-center"> 
+        <h1 id="welcome">WELCOME TO YOUR DREAM VACATION!</h1>
+        <p class="lead">Enter your email to have your vacation sent to you...</p>
           
-          <h1>WELCOME TO YOUR DREAM VACATION!</h1>
-          <p class="lead">Enter your email to have your vacation sent to you...</p>
+        <br>
           
-          <br>
-          
-          <form class="col-lg-12">
+        <form class="col-lg-12">
             <div class="input-group input-group-lg col-sm-offset-4 col-sm-4">
-              <input type="text" class="center-block form-control input-lg" title="Enter you email." placeholder="Enter your email address">
-              <span class="input-group-btn"><button class="btn btn-lg btn-primary" type="button">OK</button></span>
+                <input type="text" class="center-block form-control input-lg" title="Enter you email." placeholder="Enter your email address">
+                <span class="input-group-btn"><button class="btn btn-lg btn-primary" type="button">OK</button></span>
             </div>
-          </form>
-        </div>
-        
+        </form>
     </div>
-
-    </div> <!-- /container full -->
-
+   </div>
+ </div> 
+    
+    <!-- /container full -->
     <div class="container">
   
   	<hr>
@@ -59,16 +61,18 @@
   	<div class="row" id="questions">
         <div class="col-md-4">
           <div class="panel panel-default">
-            <div class="panel-heading"><h3>Question #1</h3>
-                <div class="panel-body">How would you like to travel?  
-                    <span class="btn-group" data-toggle="buttons">
-                      <label class="btn btn-primary">
-                        <input type="radio" name="options" id="option1"  value= 1 autocomplete="off"> Yes
-                      </label>
-                      <label class="btn btn-primary">
-                        <input type="radio" name="options" id="option2"  value= 2 autocomplete="off"> No
-                      </label>
-                    </span>
+            <div class="panel-heading"><h3>Question # 1</h3>
+                <div class="panel-body">When would you like to travel?  
+                    <fieldset>
+                        <br>
+                        <select class="chosen chosen-select" name="question1" id="question1">
+                            <option value="1">When 1</option>
+                            <option value="2">Whenere 2</option>
+                            <option value="3" selected ="selected">When 3</option>
+                            <option value="4">When 4</option>
+                            <option value="5">When 5</option>
+                        </select>
+                    </fieldset>
                 </div>
             </div>
           </div>
@@ -76,16 +80,18 @@
 
       	<div class="col-md-4">
           <div class="panel panel-default">
-            <div class="panel-heading"><h3>Question #2</h3>
-                <div class="panel-body">How would you like to travel?  
-                    <span class="btn-group" data-toggle="buttons">
-                      <label class="btn btn-primary">
-                        <input type="radio" name="options" id="option1"  value= 1 autocomplete="off"> Yes
-                      </label>
-                      <label class="btn btn-primary">
-                        <input type="radio" name="options" id="option2"  value= 2 autocomplete="off"> No
-                      </label>
-                    </span>
+            <div class="panel-heading"><h3>Question # 2</h3>
+                <div class="panel-body">What weather would you like to travel to?  
+                    <fieldset>
+                        <br>
+                        <select class="chosen chosen-select" name="question2" id="question2">
+                            <option value="1">What 1</option>
+                            <option value="2">What 2</option>
+                            <option value="3" selected ="selected">What 3</option>
+                            <option value="4">What 4</option>
+                            <option value="5">What 5</option>
+                        </select>
+                    </fieldset>
                 </div>
             </div>
           </div>
@@ -93,16 +99,18 @@
 
       	<div class="col-md-4">
           <div class="panel panel-default">
-            <div class="panel-heading"><h3>Question #3</h3>
-                <div class="panel-body">How would you like to travel?  
-                    <span class="btn-group" data-toggle="buttons">
-                        <label class="btn btn-primary">
-                            <input type="radio" name="options" id="option1"  value= 1 autocomplete="off"> Yes
-                        </label>
-                        <label class="btn btn-primary">
-                            <input type="radio" name="options" id="option2"  value= 2 autocomplete="off"> No
-                        </label>
-                    </span>
+            <div class="panel-heading"><h3>Question # 3</h3>
+                <div class="panel-body"> would you like to travel?  
+                    <fieldset>
+                        <br>
+                        <select class="chosen chosen-select" name="question3" id="question3">
+                            <option value="1">Where 1</option>
+                            <option value="2">Where 2</option>
+                            <option value="3" selected ="selected">Where 3</option>
+                            <option value="4">Where 4</option>
+                            <option value="5">Where 5</option>
+                        </select>
+                    </fieldset>
                 </div>
             </div>
           </div>
@@ -110,16 +118,18 @@
 
          <div class="col-md-4">
           <div class="panel panel-default">
-            <div class="panel-heading"><h3>Question #4</h3>
-                <div class="panel-body">How would you like to travel?  
-                    <span class="btn-group" data-toggle="buttons">
-                      <label class="btn btn-primary">
-                        <input type="radio" name="options" id="option1"  value= 1 autocomplete="off"> Yes
-                      </label>
-                      <label class="btn btn-primary">
-                        <input type="radio" name="options" id="option2"  value= 2 autocomplete="off"> No
-                      </label>
-                    </span>
+            <div class="panel-heading"><h3>Question # 4</h3>
+                <div class="panel-body">What activities would you like to do?  
+                    <fieldset>
+                        <br>
+                        <select class="chosen chosen-select" name="question4" id="question4">
+                            <option value="1">Would 1</option>
+                            <option value="2">Would 2</option>
+                            <option value="3" selected ="selected">Would 3</option>
+                            <option value="4">Would 4</option>
+                            <option value="5">Would 5</option>
+                        </select>
+                    </fieldset>
                 </div>
             </div>
           </div>
@@ -127,16 +137,18 @@
 
          <div class="col-md-4">
           <div class="panel panel-default">
-            <div class="panel-heading"><h3>Question #5</h3>
-                <div class="panel-body">How would you like to travel?  
-                    <span class="btn-group" data-toggle="buttons">
-                      <label class="btn btn-primary">
-                        <input type="radio" name="options" id="option1"  value= 1 autocomplete="off"> Yes
-                      </label>
-                      <label class="btn btn-primary">
-                        <input type="radio" name="options" id="option2"  value= 2 autocomplete="off"> No
-                      </label>
-                    </span>
+            <div class="panel-heading"><h3>Question # 5</h3>
+                <div class="panel-body">Which part of the world would you like to travel to?  
+                    <fieldset>
+                        <br>
+                        <select class="chosen chosen-select" name="question5" id="question5">
+                            <option value="1" selected="">Which 1</option>
+                            <option value="2">Which 2</option>
+                            <option value="3">Which 3</option>
+                            <option value="4">Which 4</option>
+                            <option value="5">Which 5</option>
+                        </select>
+                    </fieldset>
                 </div>
             </div>
           </div>
@@ -145,11 +157,11 @@
         <div class="col-md-4">
           <div class="panel panel-default">
             <div class="panel-heading"><h3>Let's get those results!</h3>
+                <br>
                 <span class="panel-body"></span><button type="button" class="btn btn-primary btn-lg">Submit!</button></span>
             </div>
           </div>
         </div>
-
      </div>
     
   
@@ -161,15 +173,6 @@
         </div>
     </div>
 </div>
-
-
-
-    
-    <!-- jQuery -->
-    <script src="js/jquery.js"></script>
-
-    <!-- Bootstrap Core JavaScript -->
-    <script src="js/bootstrap.min.js"></script>
 
 </body>
 
