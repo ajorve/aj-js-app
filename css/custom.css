@@ -2,14 +2,14 @@
 
 html,body {
   height:auto;
-  background-image: url("img/dream.jpg");
+  background-color: #b6ff00;
 }
 
 h1 {
   font-family: 'Antic Slab', serif;
   font-size:80px;
   color:#ff006e;
-  text-emphasis: strong
+  text-emphasis: inherit;
 }
 
 .lead {
@@ -19,9 +19,10 @@ h1 {
 
 /* Custom container */
 .container-full {
-  margin: 0 auto;
+  margin: auto;
   width: 100%;
-  min-height:80%;
+  min-height:100%;
+  background-color: #0ff
 }
 
 .panel {
@@ -30,11 +31,6 @@ h1 {
     grid-row-align: center;
 }
 
-.input[type="radio"]:not(:checked) + label {
-    color: #ff006e;
+#results {
+    display: none;
 }
-
-.input[type="radio"]:checked + label {
-    color: #808080;
-}
-  
